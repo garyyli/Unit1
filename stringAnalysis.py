@@ -5,9 +5,13 @@
 sentence = input('Enter a sentence: ')
 sentence = sentence.lower()
 
-totalCharacters = len(sentence)
+totalCharacters = int(len(sentence))
+spaces = int(sentence.count(' '))
+totalLetters = totalCharacters - spaces
+totalWords = spaces + 1
 
-print('Your sentence has', len(sentence))
+print('Your sentence has', totalWords, 'words and', totalCharacters, 'characters and', totalLetters, 'letters')
+
 character = input('Enter a character to search for: ')
 print('Your sentence has', sentence.count(character), 'of the character', character)
 
